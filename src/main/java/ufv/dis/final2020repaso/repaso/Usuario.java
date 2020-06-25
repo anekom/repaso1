@@ -8,11 +8,11 @@ public class Usuario {
 	private String ape;
 	private String email;
 	private String dni;
-	private Date nacimiento;
+	private String nacimiento;
 	
 	
 	
-	public Usuario(String nombre, String ape, String email, String dni, Date nacimiento) {
+	public Usuario(String nombre, String ape, String email, String dni, String nacimiento) {
 		super();
 		this.nombre = nombre;
 		this.ape = ape;
@@ -46,10 +46,10 @@ public class Usuario {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-	public Date getNacimiento() {
+	public String getNacimiento() {
 		return nacimiento;
 	}
-	public void setNacimiento(Date nacimiento) {
+	public void setNacimiento(String nacimiento) {
 		this.nacimiento = nacimiento;
 	}
 	
