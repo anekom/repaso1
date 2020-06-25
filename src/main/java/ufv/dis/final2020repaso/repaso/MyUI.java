@@ -33,16 +33,16 @@ public class MyUI extends UI {
         name.setCaption("Type your name here:");
         
         final TextField ape = new TextField();
-        ape.setCaption("Type your name here:");
+        ape.setCaption("Type your surname here:");
         
         final TextField email = new TextField();
-        email.setCaption("Type your name here:");
+        email.setCaption("Type your email here:");
         
         final TextField dni = new TextField();
-        dni.setCaption("Type your name here:");
+        dni.setCaption("Type your dni here:");
         
         final TextField nacimiento = new TextField();
-        nacimiento.setCaption("Type your name here:");
+        nacimiento.setCaption("Type your birth date here:");
 
         Button button = new Button("Click Me");
         button.addClickListener(e -> {
