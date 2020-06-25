@@ -28,7 +28,7 @@ public class GeneradorPDF {
 			document.open();document.add(new Paragraph(u.getDni()));
 			document.open();document.add(new Paragraph(u.getNacimiento()));
 			
-			document.open();document.add(new Paragraph("fecha de creaci'on del usuario: "+hoy));
+			document.open();document.add(new Paragraph("fecha de creacion del usuario: "+hoy));
 			
 			document.close();
 			

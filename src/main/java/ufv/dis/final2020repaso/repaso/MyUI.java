@@ -24,18 +24,37 @@ public class MyUI extends UI {
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
+    	
+    	Lista lista = new Lista();
+    	
         final VerticalLayout layout = new VerticalLayout();
         
         final TextField name = new TextField();
         name.setCaption("Type your name here:");
+        
+        final TextField ape = new TextField();
+        ape.setCaption("Type your name here:");
+        
+        final TextField email = new TextField();
+        email.setCaption("Type your name here:");
+        
+        final TextField dni = new TextField();
+        dni.setCaption("Type your name here:");
+        
+        final TextField nacimiento = new TextField();
+        nacimiento.setCaption("Type your name here:");
 
         Button button = new Button("Click Me");
         button.addClickListener(e -> {
-            layout.addComponent(new Label("Thanks " + name.getValue() 
-                    + ", it works!"));
+        	
+        	Usuario u = new Usuario(name.getValue(), ape.getValue(), email.getValue(), dni.getValue(), nacimiento.getValue());
+        	lista.addUsuario(u);
+        	
+        	GeneradorPDF.generar(u);
+            
         });
         
-        layout.addComponents(name, button);
+        layout.addComponents(name, ape, email, dni, nacimiento, button);
         
         setContent(layout);
     }
